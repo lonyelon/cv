@@ -1,0 +1,26 @@
+* Sergio Miguéns Iglesias' CV
+
+This is my fully free and open-source CV (check the LICENSE for details). It is based on a template by  Jan Vorisek.
+
+** Compiling the document
+
+To compile the CV you need to have =texlive= installed in your computer. Once you have it the you can run the following command:
+#+BEGIN_SRC shell
+make es
+#+END_SRC
+
+If you want to clean the prject just type:
+#+BEGIN_SRC shell
+make clean
+#+END_SRC
+
+** Notes on editing
+
+The latex template uses many tricks to make the CV look the way it does. For example:
+- minipage :: allows for two or more elements to coexists in the same horizontal space on the page.
+- cvsect :: makes a title for a section.
+- barchart/baritem :: displays a beautiful bar list.
+
+** For employers
+
+Contact me at =sergio@lony.xyz= ;).

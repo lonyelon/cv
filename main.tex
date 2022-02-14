@@ -1,0 +1,244 @@
+% Sergio Miguens Iglesias' CV. This document is based on a template, see LICENSE
+% for more details. You are free to copy and redistribute the code for my CV
+% freely.
+
+%                                      PACKAGES AND OTHER DOCUMENT CONFIGURATIONS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\documentclass[9pt]{developercv} % Default font size, values from 8-12pt are recommended
+\usepackage{pagecolor,lipsum}
+\usepackage{amssymb}
+\usepackage{tikz}
+
+% Cool little trick to have two languages in the same file.
+\newif\ifen
+\newif\ifes
+\newcommand{\en}[1]{\ifen#1\fi}
+\newcommand{\es}[1]{\ifes#1\fi}
+
+% Set language to Spanish.
+\estrue
+
+\begin{document}
+
+%                                                   TITLE AND CONTACT INFORMATION
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Name and title.
+\begin{minipage}[t]{0.45\textwidth}
+    \vspace{-\baselineskip}
+
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{Sergio}}}}}
+    \colorbox{black}{{\HUGE\textcolor{white}{\textbf{\MakeUppercase{M. Iglesias}}}}}
+
+    \vspace{6pt}
+
+    {\huge
+      \es{Ingeniero informático}
+      \en{Computer Engineer}
+    }
+\end{minipage}
+
+% Photo in header.
+\begin{minipage}[t]{0.45\textwidth}
+  \vspace{-0.75cm}
+  \hspace{5cm}
+  \begin{tikzpicture}
+    \clip (0,0) circle (1.5cm) node {\includegraphics[width=3cm]{img/me.jpg}};
+  \end{tikzpicture}
+\end{minipage}
+
+\vspace{0.5cm}
+
+%                                           INTRODUCTION, SKILLS AND TECHNOLOGIES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.35\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \cvsect{
+    \es{Sobre mí}
+    \en{About me}
+  }
+
+  \es{Soy Sergio, un ingeniero informático de Vilagarcía de Arousa. Me apasionan los sistemas informáticos y la programación de bajo nivel. Soy usuario exclusivamente de Linux desde hace años.}
+  \en{\lorem \lorem}
+\end{minipage}
+\begin{minipage}[t]{0.1\textwidth}
+  \hspace{0.1cm}
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+  \vspace{1cm}
+  \vspace{-\baselineskip}
+
+  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  \icon{MapMarker}{12}{Pontevedra}\\
+  \icon{Phone}{12}{+34 671307714}\\
+  \icon{At}{12}{\href{mailto:sergio@lony.xyz}{sergio@lony.xyz}}\\
+\end{minipage}
+\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+  \vspace{1cm}
+  \vspace{-\baselineskip}
+
+  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
+  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
+  \icon{Globe}{12}{\href{https://lony.xyz}{lony.xyz}}\\
+  \icon{Github}{12}{\href{https://github.com/lonyelon}{github.com/lonyelon}}\\
+  %\icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
+\end{minipage}
+
+\cvsect{Habilidades}
+
+\begin{minipage}[t]{1.0\textwidth}
+  \begin{center}
+    {\Large
+      \begin{tabular}{rl}
+        $\bigstar\bigstar\bigstar\bigstar\bigstar$ & \hspace{0.25cm} Programación de bajo nivel (C, C++, RUST), administración de sistemas,    \\
+                                               & \hspace{0.25cm} trabajo en equipo, documentación, \ldots    \vspace{0.25cm} \\
+        $\bigstar\bigstar\bigstar$                 & \hspace{0.25cm} Programación de alto nivel (Java, JS, Python), bases de datos, \ldots    \vspace{0.25cm} \\
+        $\bigstar$                                 & \hspace{0.25cm} Diseño web, diseño de interfaces de usuario, \ldots   \vspace{0.25cm} \\
+      \end{tabular}
+    }
+  \end{center}
+\end{minipage}
+
+%                                                                      EXPERIENCE
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsect{Estudios y experiencia}
+
+\begin{entrylist}
+  \entry {2021 -- actualidad} {Ingeniero de sistemas backup} {FDS -- a DXC Technology Company} {Mi trabajo consiste en administrar las copias de seguridad de miles de máquinas. Dada la naturaleza del trabajo, tengo que interactuar a dirario con sistemas Windows y Linux, hacer scripts y vivir en el terminal.
+
+          \texttt{RHLE}\slashsep\texttt{Veritas Netbackup}\slashsep\texttt{Docker}\slashsep\texttt{Python}\slashsep\texttt{Apache Airflow}\slashsep\texttt{CheckMK}}
+  \entry
+      {2017 -- 2022}
+      {Grado en ingeniería informática}
+      {Escuela técnica superior de ingeniería, USC}
+      {
+        Si algo he aprendido del grado es a trabajar con una gran carga de trabajo, deadlines inminentes y equipos diversos
+
+        Mi TFG fue un trabajo en equipo, en el que desarrollamos un entrenador personal virtual completo, incluyendo una página web, aplicación para Android, base de datos MySQL, CPD con Docker, y aplicación standalone para sistemas Windows. Este trabajoen equipo requirió de la aplicación de SCRUM y metodologías ágiles.
+      }
+\end{entrylist}
+
+%                                                                 CERTIFICACIONES
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\cvsect{Certificaciones oficiales}
+
+\setlength{\tabcolsep}{12pt}
+\begin{tabular}{cc}
+  \textbf{DevOps Foundation} & \textbf{VMWare vSphere 6.7 Foundations} \\
+  DevOps Institute & VMware \\
+  \includegraphics[height=3cm]{img/cert_devops.jpg} & \includegraphics[height=3cm]{img/cert_vmware-foundations.png}
+\end{tabular}\\
+
+%                                                                          EXTRAS
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Idiomas}
+
+  \begin{tabular}{rl}
+  \textbf{Español}   & Nativo \\
+  \textbf{Gallego}   & Nativo \\
+  \textbf{Inglés}    & Competente \\
+  \textbf{Portugués} & Básico
+  \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Hobbies}
+
+  Me encanta leer y la halterofilia. Me muero por el software libre y la filosofía UNIX.
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.3\textwidth}
+  \vspace{-\baselineskip} % Required for vertically aligning minipages
+
+  \cvsect{Contribuciones a software libre}
+    \begin{barchart}{5.5}
+      \baritem{Kernel de Linux}{40}
+      \baritem{Servidor de Matrix}{10}
+    \end{barchart}
+\end{minipage}
+
+% TODO Complete this.
+%\begin{minipage}[t]{0.9\textwidth}
+%\cvsect{Proyectos personales}
+%    \begin{entrylist}
+%      \entry {2016 -- 2017} {CPU casera} {\href{https://www.reddit.com/r/computers/comments/65pxx3/8_bit_homebrew_computer/}{\underline{\textbf{ver en Reddit}}}} {Es una CPU de 8 bits que construí en bachillerato usando \textit{breadboards} y circuítos CMOS.}
+%      \entry {2019} {Imitación de Minecraft en C++} {\href{https://github.com/lonyelon/Opencraft}{\underline{ver en Github}}} {Usa OpenGL y libnoise.}
+%      \entry {2019} {Escáner de URLs} {\href{https://github.com/lonyelon/FuzzYourYelon}{\underline{ver en Github}}} {Se le proporciona una URL y la escanea en busca de ficheros.}
+%      \entry {2020 -- actualidad} {ST} {\href{https://github.com/lonyelon/st}{\underline{\textbf{ver en Github}}}} {Mi propia versión del terminal de suckless.}
+%      \entry {2020 -- actualidad} {DWM} {\href{https://github.com/lonyelon/dwm}{\underline{\textbf{ver en Github}}}} {Mi propia versión del gestor de ventanas de suckless.}
+%      \entry {2020 -- actualidad} {DMENU} {\href{https://github.com/lonyelon/dmenu}{\underline{\textbf{ver en Github}}}} {Mi propia versión del menú de suckless.}
+%      \entry {2020 -- actualidad} {Shell scripts} {} {Conjunto de scripts para automatización Github} {Un cliente de matrix escrito en Rust e inspirado en VIM.}
+%    \end{entrylist}
+%\end{minipage}
+
+\cvsect{Tecnologías que domino}
+
+Dejo una lista de tecnologías que conozco o he empleado en el pasado para facilitar la búsqueda:\\
+
+\begin{tabular}{|c|c|}\hline
+
+  Programación de bajo nivel &
+  \texttt{C++}  \slashsep
+  \texttt{C}    \slashsep
+  \texttt{Rust} \\ \hline
+
+  Programación de alto nivel &
+  \texttt{Java}       \slashsep
+  \texttt{Python}     \slashsep
+  \texttt{Bash}       \slashsep
+  \texttt{C\#}        \slashsep
+  \texttt{JavaScript} \slashsep
+  \texttt{PHP}        \\ \hline
+
+  Servidores web &
+  \texttt{Apache HTTPD} \slashsep
+  \texttt{Nginx}        \slashsep
+  \texttt{Caddy}        \\ \hline
+
+  Bases de datos &
+  \texttt{MySQL}      \slashsep
+  \texttt{MariaDB}    \slashsep
+  \texttt{PostgreSQL} \\ \hline
+
+  Virtualización y contenedores &
+  \texttt{Docker}     \slashsep
+  \texttt{Podman}     \slashsep
+  \texttt{QEMU}       \slashsep
+  \texttt{KVM}        \slashsep
+  \texttt{VirtualBox} \slashsep
+  \texttt{VMWare}     \\ \hline
+
+  Herramientas de diseño web &
+  \texttt{Bootstrap}      \slashsep
+  \texttt{Wordpress}      \slashsep
+  \texttt{Nextcloud}      \\ \hline
+
+  Herramientas de Devops  &
+  \texttt{Git}            \slashsep
+  \texttt{Apache Airflow} \slashsep
+  \texttt{Jenkins}        \\ \hline
+
+  Misceláneo &
+  \texttt{Samba}   \slashsep
+  \texttt{OpenMPI} \slashsep
+  \texttt{CUDA}    \slashsep
+  \texttt{SDL}     \slashsep
+  \texttt{SFML}    \slashsep
+  \texttt{NuxtJS}  \\ &
+  \texttt{VueJS}   \slashsep
+  \texttt{NodeJS}  \\ \hline
+
+\end{tabular}
+
+\end{document}
