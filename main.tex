@@ -17,7 +17,7 @@
 \newcommand{\es}[1]{\ifes#1\fi}
 
 % Set language to Spanish.
-\estrue
+\entrue
 
 \begin{document}
 
@@ -41,10 +41,11 @@
 
 % Photo in header.
 \begin{minipage}[t]{0.45\textwidth}
-  \vspace{-0.75cm}
-  \hspace{5cm}
+  \vspace{-\baselineskip}
+  \vspace{-3.5cm}
+  \hspace{12.5cm}
   \begin{tikzpicture}
-    \clip (0,0) circle (1.5cm) node {\includegraphics[width=3cm]{img/me.jpg}};
+    \clip (0,0) circle (2cm) node {\includegraphics[width=4cm]{img/me.jpg}};
   \end{tikzpicture}
 \end{minipage}
 
@@ -54,49 +55,89 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.35\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \vspace{-\baselineskip}
   \cvsect{
     \es{Sobre mí}
     \en{About me}
   }
 
-  \es{Soy Sergio, un ingeniero informático de Vilagarcía de Arousa. Me apasionan los sistemas informáticos y la programación de bajo nivel. Soy usuario exclusivamente de Linux desde hace años.}
-  \en{\lorem \lorem}
+  \es{
+    Soy Sergio,
+    un ingeniero informático de Vilagarcía de Arousa.
+    Me apasionan los sistemas informáticos y la programación de bajo nivel.
+    Soy usuario exclusivamente de Linux desde hace años.
+  }
+  \en{
+    \lorem \lorem
+  }
 \end{minipage}
 \begin{minipage}[t]{0.1\textwidth}
   \hspace{0.1cm}
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the first row of icons
+\begin{minipage}[t]{0.275\textwidth}
   \vspace{1cm}
   \vspace{-\baselineskip}
 
-  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
   \icon{MapMarker}{12}{Pontevedra}\\
   \icon{Phone}{12}{+34 671307714}\\
   \icon{At}{12}{\href{mailto:sergio@lony.xyz}{sergio@lony.xyz}}\\
 \end{minipage}
-\begin{minipage}[t]{0.275\textwidth} % 27.5% of the page width for the second row of icons
+\begin{minipage}[t]{0.275\textwidth}
   \vspace{1cm}
   \vspace{-\baselineskip}
 
-  % The first parameter is the FontAwesome icon name, the second is the box size and the third is the text
-  % Other icons can be found by referring to fontawesome.pdf (supplied with the template) and using the word after \fa in the command for the icon you want
   \icon{Globe}{12}{\href{https://lony.xyz}{lony.xyz}}\\
   \icon{Github}{12}{\href{https://github.com/lonyelon}{github.com/lonyelon}}\\
-  %\icon{Twitter}{12}{\href{https://twitter.com/@alyxvance}{@alyxvance}}\\
 \end{minipage}
 
-\cvsect{Habilidades}
+\cvsect{
+  \es{Habilidades}
+  \en{Skills}
+}
 
 \begin{minipage}[t]{1.0\textwidth}
   \begin{center}
     {\Large
       \begin{tabular}{rl}
-        $\bigstar\bigstar\bigstar\bigstar\bigstar$ & \hspace{0.25cm} Programación de bajo nivel (C, C++, RUST), administración de sistemas,    \\
-                                               & \hspace{0.25cm} trabajo en equipo, documentación, \ldots    \vspace{0.25cm} \\
-        $\bigstar\bigstar\bigstar$                 & \hspace{0.25cm} Programación de alto nivel (Java, JS, Python), bases de datos, \ldots    \vspace{0.25cm} \\
-        $\bigstar$                                 & \hspace{0.25cm} Diseño web, diseño de interfaces de usuario, \ldots   \vspace{0.25cm} \\
+        $\bigstar\bigstar\bigstar\bigstar\bigstar$ & \hspace{0.25cm}
+        \es{
+          Programación de bajo nivel (C, C++, RUST),
+          administración de sistemas,
+        }
+        \en{
+          Low-level programming (C, C++, RUST),
+          systems administration,
+        }\\
+        & \hspace{0.25cm}
+        \es{
+          trabajo en equipo,
+          documentación,
+        }
+        \en{
+          teamwork,
+          documentation,
+        }
+        \ldots \vspace{0.25cm} \\
+        $\bigstar\bigstar\bigstar$ & \hspace{0.25cm}
+        \es{
+          Programación de alto nivel (Java, JS, Python),
+          bases de datos,
+        }
+        \en{
+          High-level programming (Java, JS, Python),
+          databases,
+        }
+        \ldots \vspace{0.25cm} \\
+        $\bigstar$ & \hspace{0.25cm}
+        \es{
+          Diseño web,
+          diseño de interfaces de usuario,
+        }
+        \en{
+          Web design,
+          user interface design,
+        }
+        \ldots   \vspace{0.25cm} \\
       \end{tabular}
     }
   \end{center}
@@ -105,27 +146,89 @@
 %                                                                      EXPERIENCE
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cvsect{Estudios y experiencia}
+\cvsect{
+  \es{Estudios y experiencia}
+  \en{Experience and studies}
+}
 
 \begin{entrylist}
-  \entry {2021 -- actualidad} {Ingeniero de sistemas backup} {FDS -- a DXC Technology Company} {Mi trabajo consiste en administrar las copias de seguridad de miles de máquinas. Dada la naturaleza del trabajo, tengo que interactuar a dirario con sistemas Windows y Linux, hacer scripts y vivir en el terminal.
 
-          \texttt{RHLE}\slashsep\texttt{Veritas Netbackup}\slashsep\texttt{Docker}\slashsep\texttt{Python}\slashsep\texttt{Apache Airflow}\slashsep\texttt{CheckMK}}
+  % DXC
+  \entry
+    {2021 -- \es{actualidad}\en{now}}
+    {
+      \es{Ingeniero de sistemas backup}
+      \en{Backup systems engineer}
+    }
+    {FDS -- a DXC Technology Company}
+    {
+      \es{
+        Mi trabajo consiste en administrar las copias de seguridad de miles de máquinas.
+        Dada la naturaleza del trabajo,
+        tengo que interactuar a dirario con sistemas Windows y Linux,
+        hacer scripts y vivir en el terminal.
+      }
+      \en{
+        My work consists on adminitering the backups for thousands of machines,
+        which means I have to intereact with Windows and Linux systems,
+        write scripts and live in the terminal.
+      }
+
+      \texttt{RHLE}\slashsep
+      \texttt{Veritas Netbackup}\slashsep
+      \texttt{Docker}\slashsep
+      \texttt{Python}\slashsep
+      \texttt{Apache Airflow}
+      \slashsep\texttt{CheckMK}
+    }
+
+  % University.
   \entry
       {2017 -- 2022}
-      {Grado en ingeniería informática}
+      {
+        \es{Grado en ingeniería informática}
+        \en{Computer engineering degree}
+      }
       {Escuela técnica superior de ingeniería, USC}
       {
-        Si algo he aprendido del grado es a trabajar con una gran carga de trabajo, deadlines inminentes y equipos diversos
+        \es{
+          Si algo he aprendido del grado es a trabajar con una gran carga de trabajo,
+          deadlines inminentes y equipos diversos.
 
-        Mi TFG fue un trabajo en equipo, en el que desarrollamos un entrenador personal virtual completo, incluyendo una página web, aplicación para Android, base de datos MySQL, CPD con Docker, y aplicación standalone para sistemas Windows. Este trabajoen equipo requirió de la aplicación de SCRUM y metodologías ágiles.
+          Mi TFG fue un trabajo en equipo,
+          en el que desarrollamos un entrenador personal virtual completo,
+          incluyendo una página web,
+          aplicación para Android,
+          base de datos MySQL,
+          CPD con Docker,
+          y aplicación standalone para sistemas Windows.
+          Este trabajo en equipo requirió de la aplicación de SCRUM y otras metodologías ágiles.
+        }
+        \en{
+          The thing I learned in uni,
+          over everything else,
+          was to work under preassure,
+          with incoming deadlines and diverse teams.
+
+          My end-of-degree project was a team effort,
+          where me and my colleages designed a gym personal trainer,
+          including a website,
+          an Android app,
+          a MySQL database,
+          a CPD with Docker,
+          and a standalone application for Windows systems.
+          This project required that we applied SCRUM and other agile methodologies.
+        }
       }
 \end{entrylist}
 
 %                                                                 CERTIFICACIONES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-\cvsect{Certificaciones oficiales}
+\cvsect{
+  \es{Certificaciones oficiales}
+  \en{Official certifications}
+}
 
 \setlength{\tabcolsep}{12pt}
 \begin{tabular}{cc}
@@ -138,35 +241,49 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \vspace{-\baselineskip}
 
-  \cvsect{Idiomas}
+  \cvsect{
+    \es{Idiomas}
+    \en{Languages}
+  }
 
   \begin{tabular}{rl}
   \textbf{Español}   & Nativo \\
-  \textbf{Gallego}   & Nativo \\
-  \textbf{Inglés}    & Competente \\
-  \textbf{Portugués} & Básico
+  \textbf{Galego}    & Nativo \\
+  \textbf{English}   & Competent \\
+  \textbf{Português} & Básico
   \end{tabular}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \vspace{-\baselineskip}
 
   \cvsect{Hobbies}
 
-  Me encanta leer y la halterofilia. Me muero por el software libre y la filosofía UNIX.
+  \es{
+    Me encanta leer y la halterofilia.
+    Me muero por el software libre y la filosofía UNIX.
+  }
+  \en{
+    \lorem
+  }
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.3\textwidth}
-  \vspace{-\baselineskip} % Required for vertically aligning minipages
+  \vspace{-\baselineskip}
 
-  \cvsect{Contribuciones a software libre}
-    \begin{barchart}{5.5}
-      \baritem{Kernel de Linux}{40}
-      \baritem{Servidor de Matrix}{10}
-    \end{barchart}
+  \cvsect{
+    \es{Contribuciones a software libre}
+    \en{FOSS contributions}
+  }
+  \begin{barchart}{5.5}
+    \baritem{Linux kernel}{40}
+    \baritem{Synapse (Matrix)}{10}
+  \end{barchart}
 \end{minipage}
+
+\newpage
 
 % TODO Complete this.
 %\begin{minipage}[t]{0.9\textwidth}
