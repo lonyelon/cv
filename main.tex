@@ -16,8 +16,11 @@
 \newcommand{\en}[1]{\ifen#1\fi}
 \newcommand{\es}[1]{\ifes#1\fi}
 
-% Set language to Spanish.
-\entrue
+\ifdefined\eslang
+  \estrue
+\else
+  \entrue
+\fi
 
 \begin{document}
 
@@ -54,6 +57,7 @@
 %                                           INTRODUCTION, SKILLS AND TECHNOLOGIES
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
+% About me.
 \begin{minipage}[t]{0.35\textwidth}
   \vspace{-\baselineskip}
   \cvsect{
@@ -71,6 +75,7 @@
     \lorem \lorem
   }
 \end{minipage}
+% Social icons: first column.
 \begin{minipage}[t]{0.1\textwidth}
   \hspace{0.1cm}
 \end{minipage}
@@ -82,6 +87,7 @@
   \icon{Phone}{12}{+34 671307714}\\
   \icon{At}{12}{\href{mailto:sergio@lony.xyz}{sergio@lony.xyz}}\\
 \end{minipage}
+% Social icons: second column.
 \begin{minipage}[t]{0.275\textwidth}
   \vspace{1cm}
   \vspace{-\baselineskip}
