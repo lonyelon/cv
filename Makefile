@@ -1,3 +1,6 @@
+# Build both.
+all: es en
+
 # Build spanish CV.
 es: main.tex
 	pdflatex --jobname=cv_es '\def\eslang{1}\input{main.tex}'
